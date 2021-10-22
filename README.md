@@ -9,7 +9,7 @@ recipe with the modifications discussed in the article here: [Example Repository
 
 # Weak autocompletion by default
 
-When you write JavaScript, your code editor is able to provide some sort of autocompletion based on the code you previously wrote. It does not work very well with plain JavaScript and we will see how to improve that by modifying the [todoList.js](<[https://link](https://github.com/trailheadapps/lwc-recipes/blob/main/force-app/main/default/lwc/todoList/todoList.js)>) file from Salesforce's lwc recipes repository. We are using Visual Studio Code as our code editor but other IDE also have similar features.
+When you write JavaScript, your code editor is able to provide some sort of autocompletion based on the code you previously wrote. It does not work very well with plain JavaScript and we will see how to improve that by modifying the [todoList.js](https://github.com/trailheadapps/lwc-recipes/blob/main/force-app/main/default/lwc/todoList/todoList.js) file from Salesforce's lwc recipes repository. We are using Visual Studio Code as our code editor but other IDE also have similar features.
 
 If you hover over the \_todos variable in the file, the IDE will tell you that it just knows the variable is an array of type any which can be anything.
 
