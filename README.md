@@ -105,7 +105,7 @@ Strict null check is an even stricter and safer way to configure the TypeScript 
 
 ### template auto-completion
 
-As of now Salesforce doesn't provide auto-completion for the HTML templates if the LWC components. Since it is a feature that is available in other more popular JavaScript frameworks it might come in the future for LWC. When they do so, having types will prove being ever more useful than before.
+As of now Salesforce doesn't provide auto-completion for the HTML templates in the LWC components. Since it is a feature that is available in other more popular JavaScript frameworks it might come in the future for LWC. When they do so, having types will prove being ever more useful than before.
 
 ## Closing words
 
