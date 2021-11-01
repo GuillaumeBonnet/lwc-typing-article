@@ -1,7 +1,7 @@
 # Types with LWC components for better developer experience and code reliability
 
-In this article we'll see how to use types with Salesforce's Lightning Web Components (LWC) in order to improve developer experience, productivity and code reliability. There are different ways to use types such as JSDoc, TypeScript, TypeScript with checks and TypeScript in strict mode, listed from the least constraining to the most constraining.
-The more constraining ways offer more safety regarding bug checking but seemingly demand more work. It demands more effort when you write new code or a new type. But in the long run, every time you update code, you can rely on typing and the editor to warn you about errors and needed modifications. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non-breaking.
+In this article we'll see how to use types with Salesforce's Lightning Web Components (LWC) in order to **improve developer experience, productivity and code reliability**. There are different ways to use types such as JSDoc, TypeScript, TypeScript with checks and TypeScript in strict mode, listed from the least constraining to the most constraining.
+The more constraining ways offer more safety regarding bug checking but seemingly demand more work. It demands more effort when you write new code or a new type. But in the long run, every time you update code, **you can rely on typing and the editor to warn you about errors and needed modifications**. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non-breaking.
 
 You can find a fork of the LWC
 recipe with the modifications discussed in the article here: [Example Repository](https://github.com/GuillaumeBonnet/lwc-recipes/commit/63bcdd1b25c879caa7b4c8821989e85e9762387e)
@@ -40,7 +40,9 @@ The auto-completion is now possible as shown in the following GIF.
 
 ![JSDoc auto-completion](JSDoc-auto-completion.gif)
 
-Once you defined a type in a file you can reuse it in other files. In our example we would reuse the type wherever the TodoList component is used to be certain that the data passed down with the todos attribute has the expected shape.
+Once you defined a type in a file you can reuse it in other files. In our example we would reuse the type wherever the TodoList component is used to know quickly the shape of the data that has to be passed down with the todos attribute.
+
+The typing helps to **write new code faster** when it's related to the todoList because auto-completion helps, especially if you are comming back to code that you are not familiar with anymore.
 
 JSDoc types can match the needs of your project, but the tag syntax can be complicated to write. If you go down that road you might want to find a good JSDoc extension to help you.
 In the next part we'll define types with Typescript, which is less verbose than JSDoc types.
@@ -48,7 +50,7 @@ In the next part we'll define types with Typescript, which is less verbose than 
 ## TypeScript and JSDoc
 
 TypeScript (TS) is a popular language that is like a stricter, structured and typed JavaScript.
-Projects that use this language have source files written in TypeScript and a build step to transpile the code into JavaScript. This build step doesn't fit Salesforce projects, but we can still use the power of TypeScript files, without changing our whole project structure, by defining types in TypeScript files and referencing those types in JSDoc tags.
+Projects that use this language have source files written in TypeScript and a build step to transpile the code into JavaScript. This build step doesn't fit Salesforce projects, but we can still **use the power of TypeScript files, without changing our whole project structure**, by defining types in TypeScript files and referencing those types in JSDoc tags.
 
 To do that let's create the file todo.ts in its folder lwc-recipes\force-app\main\default\lwc\todoList\\.
 ![folder with TypeScript File](todoListFolderWithTS.png)
@@ -68,7 +70,7 @@ Let's update the JSDoc tags to use this type:
 
 ![TSDoc auto-completion](TSDoc-auto-completion.gif)
 
-We have the same functionality with types defined with JSDoc, but I prefer the TypeScript method because it's easier and shorter to write.
+We have the same functionality with types defined with JSDoc, but I prefer the TypeScript method because it's **easier and shorter to write**.
 
 ## TypeScript check
 
@@ -76,7 +78,7 @@ Whether you define types with TS or JSDoc you can
 configure your file so that the editor is stricter and checks for more errors.
 To do so, add the comment `//@ts-check` at the beginning of your js files.
 
-The following GIF shows that adding this comment checks for many errors such as a spelling error on a property. The error can now be fixed instead of going through and creating a bug at run time in production.
+The following GIF shows that adding this comment checks for many errors such as a spelling error on a property. **The error caught can now be fixed instead of going through and creating a bug at run time in production.**
 
 ![ts-check in editor](TS-check.gif)
 
@@ -100,8 +102,8 @@ This fix is not very practical because sfdx regularly override the jsconfig.json
 
 ### template auto-completion
 
-As of now Salesforce doesn't provide auto-completion for the HTML templates in the LWC components.
+As of now Salesforce doesn't provide auto-completion for the HTML templates in the LWC components. Other famous JavaScript frameworks have this feature and it works very well thanks to types.
 
 ## Closing words
 
-Typing LWC components with a TypeScript file and the ts-check verification is a quick an easy way to improve developer experience and code quality. It is noncommittal and has the advantage to be used on a per-file basis for tryouts.
+Typing LWC components with a TypeScript file and the ts-check verification is a **quick an easy way to improve developer experience and code quality**. It is **noncommittal** and has the advantage to be used on a per-file basis for tryouts.
