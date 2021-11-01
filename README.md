@@ -1,8 +1,7 @@
 # Types with LWC components for better developer experience and code reliability
 
 In this article we'll see how to use types with Salesforce's Lightning Web Components (LWC) in order to improve developer experience, productivity and code reliability. There are different ways to use types such as JSDoc, TypeScript, TypeScript with checks and TypeScript in strict mode, listed from the least constraining to the most constraining.
-
-The more constraining ways offer more safety regarding bug checking but seemingly demand more work. It demands more effort when you write new code or a new type. But in the long run, every time you update code, you can rely on typing and the editor to warn you about errors and needed modifications. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non- breaking.
+The more constraining ways offer more safety regarding bug checking but seemingly demand more work. It demands more effort when you write new code or a new type. But in the long run, every time you update code, you can rely on typing and the editor to warn you about errors and needed modifications. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non-breaking.
 
 You can find a fork of the LWC
 recipe with the modifications discussed in the article here: [Example Repository](https://github.com/GuillaumeBonnet/lwc-recipes/commit/63bcdd1b25c879caa7b4c8821989e85e9762387e)
@@ -11,7 +10,7 @@ recipe with the modifications discussed in the article here: [Example Repository
 
 When you write JavaScript, your code editor is able to provide some sort of auto-completion based on the code you previously wrote. It does not work very well with plain JavaScript and we will see how to improve that by modifying the [todoList.js](https://github.com/trailheadapps/lwc-recipes/blob/main/force-app/main/default/lwc/todoList/todoList.js) file from Salesforce's LWC recipes repository. We are using Visual Studio Code as our code editor, but other IDE also have similar features.
 
-If you hover over the \_todos variable in the file, the IDE will tell you that it just knows the variable is an array of type any which can be anything.
+If you hover over the \_todos variable in the file, the IDE will tell you that it just knows the variable is an array of type "any" which can be anything.
 
 ![Hovering an untyped variable](var-hover-any.png)
 
@@ -69,7 +68,7 @@ Let's update the JSDoc tags to use this type:
 
 ![TSDoc auto-completion](TSDoc-auto-completion.gif)
 
-We have the same functionality as with types defined with JSDoc, but I prefer the TypeScript method because it's easier and shorter to write.
+We have the same functionality with types defined with JSDoc, but I prefer the TypeScript method because it's easier and shorter to write.
 
 ## TypeScript check
 
@@ -105,4 +104,4 @@ As of now Salesforce doesn't provide auto-completion for the HTML templates in t
 
 ## Closing words
 
-Typing LWC components with a TypeScript file and the ts-check verification is a quick an easy way to improve its developer experience and code quality. It is noncommittal and has the advantage to be used on a per-file basis for tryouts.
+Typing LWC components with a TypeScript file and the ts-check verification is a quick an easy way to improve developer experience and code quality. It is noncommittal and has the advantage to be used on a per-file basis for tryouts.
