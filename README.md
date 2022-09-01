@@ -4,7 +4,7 @@ In this article we'll see how to use types with Salesforce's Lightning Web Compo
 The more constraining ways offer more safety regarding bug checking but seemingly demand more work. It demands more effort when you write new code or a new type. But in the long run, every time you update code, **you can rely on typing and the editor to warn you about errors and needed modifications**. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non-breaking.
 
 You can find a fork of the LWC
-recipe with the modifications discussed in the article here: [Example Repository](https://github.com/GuillaumeBonnet/lwc-recipes/commit/63bcdd1b25c879caa7b4c8821989e85e9762387e)
+recipe with the modifications discussed in the article here: [Example Repository](https://github.com/trailheadapps/lwc-recipes/compare/main...GuillaumeBonnet:lwc-recipes:typing-todo-list)
 
 ## Weak auto-completion by default
 
@@ -107,3 +107,5 @@ As of now Salesforce doesn't provide auto-completion for the HTML templates in t
 ## Closing words
 
 Typing LWC components with a TypeScript file and the ts-check verification is a **quick an easy way to improve developer experience and code quality**. It is **noncommittal** and has the advantage to be used on a per-file basis for tryouts.
+
+If you want to read more about this subject with a different perspective, [Aditya Naag](https://twitter.com/adityanaag) wrote 2 articles about lwc typing which go more in details on this matter: https://developer.salesforce.com/blogs/2022/04/how-to-use-typescript-with-salesforce-part-1 and https://developer.salesforce.com/blogs/2022/04/how-to-use-typescript-with-salesforce-part-2.
