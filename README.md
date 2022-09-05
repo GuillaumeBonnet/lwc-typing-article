@@ -1,7 +1,11 @@
 # Types with LWC components for better developer experience and code reliability
 
-In this article we'll see how to use types with Salesforce's Lightning Web Components (LWC) in order to **improve developer experience, productivity and code reliability**. There are different ways to use types such as JSDoc, TypeScript, TypeScript with checks and TypeScript in strict mode, listed from the least constraining to the most constraining.
-The more constraining ways offer more safety regarding bug checking but seemingly demand more work. It demands more effort when you write new code or a new type. But in the long run, every time you update code, **you can rely on typing and the editor to warn you about errors and needed modifications**. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non-breaking.
+Using types with Salesforce's Lightning Web Components (LWC) is a good way to **improve developer experience, productivity and code reliability**. Typing boosts your editor's autocompletion and its ability to check for errors.
+
+There are different ways to use types such as JSDoc, TypeScript, TypeScript with checks and TypeScript in strict mode, listed from the least constraining to the most constraining.
+The more constraining ways offer more safety regarding bug checking but seemingly demand more work.
+
+Typing demand more work when you write new code, but in the long run, every time you update code, you can rely on typing and the editor to warn you about errors and needed modifications. It means you don't have to provide the mental energy and time needed to check everywhere a variable is used to be sure the changes are non-breaking.
 
 You can find a fork of the LWC
 recipe with the modifications discussed in the article here: [Example Repository](https://github.com/trailheadapps/lwc-recipes/compare/main...GuillaumeBonnet:lwc-recipes:typing-todo-list)
@@ -42,7 +46,7 @@ The auto-completion is now possible as shown in the following GIF.
 
 Once you defined a type in a file you can reuse it in other files. In our example we would reuse the type wherever the TodoList component is used to know quickly the shape of the data that has to be passed down with the todos attribute.
 
-The typing helps to **write new code faster** when it's related to the todoList because auto-completion helps, especially if you are comming back to code that you are not familiar with anymore.
+The typing helps to **write new code faster** when it's related to the todoList because auto-completion helps, especially if you are coming back to code that you are not familiar with anymore.
 
 JSDoc types can match the needs of your project, but the tag syntax can be complicated to write. If you go down that road you might want to find a good JSDoc extension to help you.
 In the next part we'll define types with Typescript, which is less verbose than JSDoc types.
@@ -82,7 +86,7 @@ The following GIF shows that adding this comment checks for many errors such as 
 
 ![ts-check in editor](TS-check.gif)
 
-As you can see the downside is that it also triggers false positive errors for getters, setters and some imports. But I believe the safety you get from ts-check outweigh the drawbacks.
+As you can see the downside is that it also triggers false positive errors for getters, setters and some imports. But I believe the safety you get from ts-check outweighs the drawbacks.
 
 ## Side notes
 
